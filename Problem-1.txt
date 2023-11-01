@@ -1,1 +1,0 @@
-Print The Multiplication Table From 1 to  10 , the excpected output should be as follow: 
