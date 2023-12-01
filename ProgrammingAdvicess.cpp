@@ -10,24 +10,30 @@ string ReadString(string& Name) {
 	getline(cin, Name);
 	return Name;
 }
-void PrintFirstLetterOfTheString(string Name) {
-	bool isFirstLetter = true;
-	for (int i = 0; i < Name.length(); i++)
+void GetWord(string Name) {
+	bool isAWord = true;
+	int i = 0;
+	while( i < Name.length())
 	{
-		if (Name[i] != ' ' && isFirstLetter == true) {
-		Name[i] =  toupper(Name[i]);
-		isFirstLetter == false;
-		}
-		(Name[i] == ' ') ? isFirstLetter = true : isFirstLetter = false;
-	}
-	cout << Name << endl;
-}
 
+		if (Name[i] != ' ' && isAWord == true)
+		{
+			cout << Name[i];
+			i++;
+		}
+
+		else {
+			cout << endl;
+			i++;
+		}
+	}
+
+}
 
 int main() 
 {
-	string name;
-	PrintFirstLetterOfTheString(ReadString(name));
+	string name ;
+	GetWord(ReadString(name));
 
 	return 0;
 }
